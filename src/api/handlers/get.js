@@ -1,6 +1,6 @@
 import api from "../api";
 
-export default async (query) => {
+export default get = async (query) => {
   try {
     const response = await api.get("https://api.unsplash.com/search/photos", {
       params: { query },

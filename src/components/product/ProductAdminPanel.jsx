@@ -3,7 +3,7 @@ import EditProduct from "./buttons/EditProduct";
 import DeleteProduct from "./buttons/DeleteProduct";
 export default class ProductAdminPanel extends Component {
   render() {
-    const { title, price, image, id, thumb } = this.props.shoes;
+    const { title, price, image, id } = this.props.shoes;
     return (
       <div className="product-admin-panel flex flex-row flex-justify-space-bt">
         <p className="product-title">{title}</p>

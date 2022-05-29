@@ -1,6 +1,6 @@
 import shoesApi from "../shoesApi";
 
-export default async (data) => {
+export default postNewShoes = async (data) => {
   try {
     const response = await shoesApi.post("", data);
     return response;

@@ -1,6 +1,6 @@
 import shoesApi from "../shoesApi";
 
-export default async (id) => {
+export default deleteShoes = async (id) => {
   try {
     const response = await shoesApi.delete(id);
     return response;

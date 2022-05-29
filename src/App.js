@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import HomePage from "./components/screens/HomePage";
-import Cart from "./components/screens/Cart";
 import NavBar from "./components/headers/NavBar";
 import { BrowserRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
-import get from "./api/handlers/get";
 import getShoes from "./api/handlers/getShoes";
 import ShoesContext from "./context/ShoesContext";
 import "./style.css";
@@ -18,9 +16,7 @@ import deleteShoes from "./api/handlers/deleteShoes";
 import AddNewShoes from "./components/screens/AddNewShoes";
 import postNewShoes from "./api/handlers/postNewShoes";
 import EditShoes from "./components/screens/EditShoes";
-import pustShoes from "./api/handlers/putShoes";
 import putShoes from "./api/handlers/putShoes";
-// import getShoes from "./api/handlers/getShoes";
 
 export default class App extends Component {
   state = { shoes: [], cart: [] };
@@ -60,7 +56,7 @@ export default class App extends Component {
   };
   addNewProduct = async (newShoes, callBack) => {
     try {
-      const response = await postNewShoes(newShoes);
+      await postNewShoes(newShoes);
       const getShoesFromApi = await getShoes();
       this.setState({ shoes: getShoesFromApi });
       callBack();
@@ -70,7 +66,7 @@ export default class App extends Component {
   };
   editProduct = async (updatedShoes, id, callBack) => {
     try {
-      const response = await putShoes(id, updatedShoes);
+      await putShoes(id, updatedShoes);
       const getShoesFromApi = await getShoes();
       this.setState({ shoes: getShoesFromApi });
       callBack();

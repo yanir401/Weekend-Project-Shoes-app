@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Redirect } from "react-router-dom";
 import ShoesContext from "../../../context/ShoesContext";
 
 export default class EditProduct extends Component {
