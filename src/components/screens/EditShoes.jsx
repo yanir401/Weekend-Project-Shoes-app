@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import ShoesContext from "../../context/ShoesContext";
 
 export default class EditShoes extends Component {
-  state = { title: "", price: "", image: "", shoesToEdit: null };
+  state = {
+    title: "",
+    price: "",
+    image: "",
+    shoesToEdit: null,
+    btnText: "Cancel",
+  };
 
   componentDidMount() {
     const shoesToEdit = this.context.shoes.find(({ id }) => {
@@ -17,11 +23,17 @@ export default class EditShoes extends Component {
   }
   handleOnChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value });
-    console.log(this.state);
   };
 
   addedSuccessfully = () => {
-    this.setState({ title: "", price: "", image: "", edit: true });
+    this.setState({
+      title: "",
+      price: "",
+      image: "",
+      edit: true,
+      shoesToEdit: null,
+      btnText: "Go Back",
+    });
   };
   handleSubmit = (event) => {
     event.preventDefault();
@@ -94,7 +106,7 @@ export default class EditShoes extends Component {
 
         {this.state.edit && <p>Edit Successfully</p>}
         <button className="btn btn-darkGrey" onClick={this.goBack}>
-          Cancel
+          {this.state.btnText}
         </button>
       </div>
     );

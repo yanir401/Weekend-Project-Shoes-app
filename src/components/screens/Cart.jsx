@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export default class Cart extends Component {
   render() {
-    console.log(this.props.cart.length);
     return (
       <div className="icon">
         <Link to={"/cart"} className="cart">
