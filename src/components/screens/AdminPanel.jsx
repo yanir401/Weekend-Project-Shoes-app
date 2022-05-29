@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import ShoesContext from "../../context/ShoesContext";
 import AdminProductsList from "../lists/AdminProductsList";
-import "../../adminPanel.css";
 import { Link } from "react-router-dom";
 export default class AdminPanel extends Component {
   render() {

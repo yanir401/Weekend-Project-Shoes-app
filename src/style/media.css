@@ -1,0 +1,43 @@
+@media (max-width: 1600px) {
+  :root {
+    font-size: 14px;
+  }
+  .shoes-list {
+    grid-template-columns: repeat(4, minmax(200px, 400px));
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+  .shoes-list {
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+  }
+  .product-admin-panel img {
+    width: 125px;
+    height: 125px;
+  }
+}
+@media (max-width: 750px) {
+  :root {
+    font-size: 13px;
+  }
+  .shoes-list {
+    grid-template-columns: repeat(2, minmax(200px, 300px));
+  }
+  .with700 {
+    flex-direction: column;
+  }
+  .product-admin-panel img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 550px) {
+  :root {
+    font-size: 12px;
+  }
+  .shoes-list {
+    grid-template-columns: repeat(1, minmax(200px, 300px));
+  }
+}

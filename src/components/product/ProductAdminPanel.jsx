@@ -11,7 +11,7 @@ export default class ProductAdminPanel extends Component {
         <div className="align-self-center">
           <img src={image} alt={title} />
         </div>
-        <div className="flex align-self-start">
+        <div className="flex align-self-start with700">
           <EditProduct id={id} shoes={this.props.shoes} />
           <DeleteProduct id={id} />
         </div>
