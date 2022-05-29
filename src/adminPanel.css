@@ -1,0 +1,29 @@
+.product-admin-panel {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+.product-admin-panel img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+.product-title {
+  text-align: center;
+}
+
+.admin-panel-container {
+  /* background-color: aqua; */
+  width: 80%;
+  text-align: center;
+}
+
+.grid-admin-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.edit-image-shoes {
+  max-width: 50%;
+}
