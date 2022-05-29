@@ -1,6 +1,5 @@
 import shoesApi from "../shoesApi";
-
-export default putShoes = async (id, shoes) => {
+const putShoes = async (id, shoes) => {
   try {
     const response = await shoesApi.put(id, shoes);
     return response;
@@ -8,3 +7,4 @@ export default putShoes = async (id, shoes) => {
     console.log(error);
   }
 };
+export default putShoes;

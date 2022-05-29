@@ -1,6 +1,6 @@
 import shoesApi from "../shoesApi";
 
-export default setShoes = async (data) => {
+const setShoes = async (data) => {
   try {
     const promiseArray = [];
     for (const shoes of data) {
@@ -13,3 +13,4 @@ export default setShoes = async (data) => {
     console.log(error);
   }
 };
+export default setShoes;

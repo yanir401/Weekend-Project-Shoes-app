@@ -1,6 +1,6 @@
 import shoesApi from "../shoesApi";
 
-export default deleteShoes = async (id) => {
+const deleteShoes = async (id) => {
   try {
     const response = await shoesApi.delete(id);
     return response;
@@ -8,3 +8,4 @@ export default deleteShoes = async (id) => {
     console.log(error);
   }
 };
+export default deleteShoes;

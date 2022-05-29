@@ -1,6 +1,6 @@
 import shoesApi from "../shoesApi";
 
-export default getShoes = async () => {
+const getShoes = async () => {
   try {
     const response = await shoesApi.get();
     return response.data;
@@ -8,3 +8,4 @@ export default getShoes = async () => {
     console.log(error);
   }
 };
+export default getShoes;
