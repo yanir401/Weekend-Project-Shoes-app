@@ -2,7 +2,7 @@
 
 
 ## In this porject I used :
-  *React 
+  * React 
  # API #
  # HTTP Request #
 
